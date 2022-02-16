@@ -2,10 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export default function App() {
+  const handlePress = () => console.log("text pressed");
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text numberOfLines={1} onPress={handlePress}>
+        Hello, world. This is a long text, let's see 
+        how many words can fit on a single line.
+      </Text>
     </SafeAreaView>
   );
 }
@@ -13,8 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
