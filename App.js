@@ -1,17 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
-import Picture from './assets/icon.png';
+import { StyleSheet, Text, Button, SafeAreaView } from 'react-native';
+import {useState} from 'react';
 
 export default function App() {
-  const handlePress = () => console.log("text pressed");
+  // const handlePress = () => console.log("text pressed");
+  const [counter, setCounter] = useState(0);
+  const addCounter = () => {
+    setCounter(counter ++)
+  }
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Hello, world. 
-      </Text>
-      <Image source={Picture}></Image>
+      <Button title="Add"></Button>
+      <Text>{counter}</Text>
     </SafeAreaView>
+
   );
 }
 
