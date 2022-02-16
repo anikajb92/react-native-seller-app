@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import Picture from './assets/icon.png';
 
 export default function App() {
   const handlePress = () => console.log("text pressed");
@@ -7,9 +8,9 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text numberOfLines={1} onPress={handlePress}>
-        Hello, world. This is a long text, let's see 
-        how many words can fit on a single line.
+        Hello, world. 
       </Text>
+      <Image source={Picture}></Image>
     </SafeAreaView>
   );
 }
